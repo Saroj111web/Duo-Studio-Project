@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PP mori';
+    color:#ffff;
+}
+html,body {
+    height :100%;
+    width : 100%;
+}
+#purple{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: #EDBFFF;
+    opacity: 0;
+    display: none;
+    transition: opacity ease 1s;
+    
+}
+.cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:fixed;
+    background-color: #EDBFFF;
+    z-index: 8;
+    transition: background-image ease 0.5s;
+    mix-blend-mode: difference;
+    background-position: center;
+    background-size: cover;
+    /* transition: left linear 0.1s top linear 0.1s; */
+}
+#purple{
+height:100vh;
+width:100vw;
+top:0;
+position:fixed;
+background-color: #EDBFFF;
+z-index: 100;
+opacity: 0;
+display: none;
+transition: opacity ease 1s;
+}
+.main{
+    background-color: #0F0D0D;
+    cursor:none;
+}
+.page1{
+    min-height: 100vh; 
+     /*  vh : view port height */
+     /* we dont give height to main div we give it to its children */
+     /* kyuki maine parent ko koi height nhi diya hai toh mai vh ka use karunga */
+     width:100%;
+     position:relative;
+     z-index: 9;
+     padding-top: 12vw;
+}
+#nav{
+    height:55px;
+    width:100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 30px; 
+    /* elements thode andar aa gaye isse */
+    position:fixed;
+    mix-blend-mode: difference;
+    z-index: 102;
+}
+#nav imag{
+    height: 20px;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#nav #circle{
+    height: 20px;
+    width:20px;
+    border-radius: 50%;
+    background-color: #ffff;
+}
+#nav h4{
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#nav h4:nth-child(1){
+    /* text-decoration: underline; */
+    border-bottom: 1.5px solid #ffff;
+}
+.page1 h1{
+/* page1>h1 means direct under means uska khudka child */
+font-size: 7vw;
+/* vw se page chota bada hone ke anusaar font bhi change hota hai */
+font-family: PP mori;
+font-weight: 300;
+margin-left: 6vw;
+}
+.page1 h2{
+    /* page1>h1 means direct under means uska khudka child */
+    font-size: 7vw;
+    /* vw se page chota bada hone ke anusaar font bhi change hota hai */
+    font-family: PP mori;
+    font-weight: 300;
+    margin-left: 26vw;
+}
+.page1 video{
+    width: 60%;
+    margin-top: 10vw;
+    position: relative;
+    left:50%;
+    transform :  translate(-50%,0);
+}
+.page2{
+    min-height: 80vh;
+    width: 100%;
+    padding: 100px 0;
+    padding: 0 5vw;
+    border-bottom: #6c6c6c;
+    position:relative;
+    z-index: 9;
+}
+.page2 h1{
+    font-size: 7vw;
+    font-weight: 500;
+    color:#111;
+}
+.page2-container{
+    height:60vh;
+    width:100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 5vw; */
+}
+.page2-left{
+    /* background-color: blue; */
+    width:38%;
+}
+.page2-right{
+    /* background-color: blue; */
+    width:24%;
+}
+.page2-left h2{
+    font-size: 4vw;
+    font-weight: 300;
+    color:#111;
+    line-height: 4vw;
+}
+.page2-right p{
+    font-size: 28px;
+    color:#111;
+}
+.page2-right button{
+    width:100%;
+    border-radius: 50px;
+    border:none;
+    padding: 4px 0;
+    background-color: #EDBFFF;
+    color:#111;
+    margin-top: 20px;
+}
+.page3{
+    min-height:150vh;
+    width: 100%;
+    padding-top:100px;
+    position:relative;
+    z-index: 9;
+}
+.page3 h1{
+    font-size: 6.8vw;
+    font-weight: 300;
+    color:#111; 
+    margin-left: 100px;
+}
+.page3-part1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.page3-part1 img{
+height: 600px;
+margin-top: 160px;
+}
+.page4{
+    min-height: 100vh;
+    width:100%;
+    position:relative;
+    z-index: 9;
+    padding: 120px 80px;
+}
+.elam{
+    /* background-color: salmon; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10%;
+
+}
+.elam img{
+position: absolute;
+opacity: 0;
+transition: all ease-out 0.3s;
+transform: translateY(9%) rotate(2deg);
+}
+.elam img:nth-child(1){
+    left:3%;
+}
+.elam img:nth-child(3){
+    right:4%;
+}
+.text-div{
+    /* background-color: lightblue; */
+    height: 115px;
+    overflow: hidden;
+}
+.elam h1{
+    font-size: 7.3vw;
+    font-weight: 500;
+    transition: all ease-out 0.5s;
+
+}
+.elam:hover h1{
+    /* background-color: black; */
+    transform: translateY(-100%);
+    color:#EDBFFF
+}
+.elam:hover img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+}
+.page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding: 140px 100px;
+}
+.page5 h2{
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+.box{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 20px;
+    border-top: 2px solid #dadada;
+}
+
+.box:nth-last-child(1){
+    border-bottom: 2px solid #dadada;
+
+}
+
+
+footer{
+    height: 90vh;
+    width: 100%;
+    background-color: #EDBFFF;
+}
