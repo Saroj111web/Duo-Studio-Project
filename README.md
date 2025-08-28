@@ -1,2 +1,2 @@
 # project1
-small project on front end
+project on front end created an interactive and responsive website
